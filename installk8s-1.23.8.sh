@@ -11,7 +11,7 @@ echo "            -> Done"
 
 echo "     STEP 2: Installing apt-transport-https"
         apt-get install -y apt-transport-https 1>/dev/null
-        curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add
+        curl -s https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/ | apt-key add
         echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' > /etc/apt/sources.list.d/kubernetes.list
 echo "            -> Done"
 
